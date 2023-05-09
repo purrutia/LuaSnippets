@@ -65,6 +65,7 @@ return {
       }
     )
   ),
+
  -- H1 with class
   s( { trig = "h1", dscr = "H1 tags with class" },
     fmt(
@@ -79,12 +80,100 @@ return {
       }
     )
   ),
+
+  -- h2
+  s( { trig = "h2", dscr = "h2 tags" },
+    fmt(
+        [[
+        <h2>{}</h2>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- h2 with class
+  s( { trig = "h2", dscr = "h2 tags with class" },
+    fmt(
+        [[
+        <h2 class={}>{}</h2>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- h3
+  s( { trig = "h3", dscr = "h3 tags" },
+    fmt(
+        [[
+        <h3>{}</h3>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- h3 with class
+  s( { trig = "h3", dscr = "h3 tags with class" },
+    fmt(
+        [[
+        <h3 class={}>{}</h3>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- h4
+  s( { trig = "h4", dscr = "h4 tags" },
+    fmt(
+        [[
+        <h4>{}</h4>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- h4 with class
+  s( { trig = "h4", dscr = "h4 tags with class" },
+    fmt(
+        [[
+        <h4 class={}>{}</h4>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
  -- Paragraphs
-  s( { trig = "pg", dscr = "HTML Paragraphs" },
+  s( { trig = "pg", dscr = "HTML Paragraphs", },
     fmt(
         [[
         <p>
-        {}
+          {}
         </p>
         {}
         ]],
