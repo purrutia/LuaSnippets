@@ -52,6 +52,20 @@ return {
       )
   ),
 
+ -- H1 with class
+  s( { trig = "h1", dscr = "H1 tags with class" },
+    fmt(
+        [[
+        <h1 class="{}">{}</h1>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
   -- H1
   s( { trig = "h1", dscr = "H1 tags" },
     fmt(
@@ -65,11 +79,12 @@ return {
       }
     )
   ),
- -- H1 with class
-  s( { trig = "h1", dscr = "H1 tags with class" },
+
+ -- H2 with class
+  s( { trig = "h2", dscr = "H2 tags with class" },
     fmt(
         [[
-        <h1 class={}>{}</h1>
+        <h2 class="{}">{}</h2>
         {}
         ]],
       {
@@ -79,12 +94,99 @@ return {
       }
     )
   ),
- -- Paragraphs
-  s( { trig = "pg", dscr = "HTML Paragraphs" },
+  -- H2
+  s( { trig = "h2", dscr = "H2 tags" },
+    fmt(
+        [[
+        <h2>{}</h2>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- H3 with class
+  s( { trig = "h3", dscr = "H3 tags with class" },
+    fmt(
+        [[
+        <h3 class="{}">{}</h3>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+  -- H3
+  s( { trig = "h3", dscr = "H3 tags" },
+    fmt(
+        [[
+        <h3>{}</h3>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- H4 with class
+  s( { trig = "h4", dscr = "H4 tags with class" },
+    fmt(
+        [[
+        <h4 class="{}">{}</h4>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+  -- H4
+  s( { trig = "h4", dscr = "H4 tags" },
+    fmt(
+        [[
+        <h4>{}</h4>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+ -- Paragraph with class
+  s( { trig = ":p", dscr = "HTML Paragraph with class" },
+    fmt(
+        [[
+        <p class="{}">
+          {}
+        </p>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+ -- Paragraph
+  s( { trig = ":p", dscr = "HTML Paragraphs" },
     fmt(
         [[
         <p>
-        {}
+          {}
         </p>
         {}
         ]],
@@ -94,5 +196,211 @@ return {
       }
     )
   ),
+
+  -- Links with class
+  s( { trig = ":link", dscr = "HTML Link with class" },
+    fmt(
+        [[
+        <a class="{}" href={}>{}</a>{}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+        i(0),
+      }
+    )
+  ),
+
+  -- Links
+  s( { trig = ":link", dscr = "HTML Link with class" },
+    fmt(
+        [[
+        <a href={}>{}</a>{}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- Images with class
+  s( { trig = ":img", dscr = "Image with class" },
+    fmt(
+        [[
+        <img class="{}" src={} alt={}>{}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+        i(0),
+      }
+    )
+  ),
+
+  -- Images
+  s( { trig = ":img", dscr = "Image" },
+    fmt(
+        [[
+        <img src={} alt={}>{}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- Nav
+  s( { trig = ":nav", dscr = "Navigation Bar" },
+    fmt(
+        [[
+        <nav>
+          {}
+        </nav>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+  -- div with class
+  s( { trig = ":div", dscr = "div with class" },
+    fmt(
+        [[
+        <div class="{}">
+          {}
+        </div>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- div
+  s( { trig = ":div", dscr = "div" },
+    fmt(
+        [[
+        <div>
+          {}
+        </div>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+  -- article with class
+  s( { trig = ":article", dscr = "article with class" },
+    fmt(
+        [[
+        <article class="{}">
+          {}
+        </article>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+
+  -- article
+  s( { trig = ":article", dscr = "article" },
+    fmt(
+        [[
+        <article>
+          {}
+        </article>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+  -- List with class
+  s( { trig = ":ul", dscr = "list with class" },
+    fmt(
+        [[
+        <ul class="{}">
+          {}
+        </ul>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+  -- List
+  s( { trig = ":ul", dscr = "list" },
+    fmt(
+        [[
+        <ul>
+          {}
+        </ul>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+  -- list item with class
+  s( { trig = ":li", dscr = "list item with class" },
+    fmt(
+        [[
+        <li class="{}">
+          {}
+        </li>
+        {}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(0),
+      }
+    )
+  ),
+  -- list item
+  s( { trig = ":li", dscr = "list item" },
+    fmt(
+        [[
+        <li>
+          {}
+        </li>
+        {}
+        ]],
+      {
+        i(1),
+        i(0),
+      }
+    )
+  ),
+
+
+
 }
 
